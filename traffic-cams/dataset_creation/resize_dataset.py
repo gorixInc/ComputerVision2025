@@ -4,6 +4,7 @@ import shutil
 import cv2
 import xml.etree.ElementTree as ET
 
+## AI GENERATED CODE
 def resize_image(img_path, out_path, new_size=(1280, 720)):
     """
     Read an image, resize to (width=1280, height=720),

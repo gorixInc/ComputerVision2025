@@ -2,6 +2,7 @@ import os
 import time
 import requests
 from datetime import datetime
+## AI GENERATED CODE
 
 # URL of the image
 BASE_URL = "https://ristmikud.tallinn.ee/last/"

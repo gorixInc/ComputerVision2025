@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-
 import glob
 import os
 import datetime
 import matplotlib.pyplot as plt
 from collections import Counter
+
+## AI GENERATED CODE
 
 def plot_jpegs_distribution(dir_path):
     # Gather .jpg and .jpeg files

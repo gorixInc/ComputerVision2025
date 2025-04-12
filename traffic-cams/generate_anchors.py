@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 import numpy as np
 from sklearn.cluster import KMeans
 
+## AI GENERATED CODE
+
 def parse_annotation_xml(xml_file):
     """
     Parse a PASCAL VOC XML file and return list of (width, height)

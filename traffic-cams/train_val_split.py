@@ -3,6 +3,8 @@ import glob
 import shutil
 import random
 
+## AI GENERATED CODE
+
 def create_dirs(dirs_list):
     """Helper to create directories if they don't exist."""
     for d in dirs_list:
