@@ -12,11 +12,11 @@ def create_dirs(dirs_list):
 
 def main():
     # -------------------------- USER SETTINGS --------------------------
-    images_dir = "Project/dataset_resized/images"
-    annots_dir = "Project/dataset_resized/Annotations"
+    images_dir = "traffic_cams/main_dataset/images"
+    annots_dir = "traffic_cams/main_dataset/Annotations"
 
     # Output folders for train/val
-    base_output_dir = "Project/dataset_resized_split/"  # Everything will be inside here
+    base_output_dir = "traffic_cams/dataset_resized_split/"  # Everything will be inside here
     train_images_dir = os.path.join(base_output_dir, "train", "images")
     train_annots_dir = os.path.join(base_output_dir, "train", "Annotations")
     val_images_dir   = os.path.join(base_output_dir, "val",   "images")

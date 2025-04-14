@@ -78,12 +78,12 @@ def resize_voc_annotation(xml_in, xml_out, orig_w, orig_h, new_w=1280, new_h=720
 
 def main():
     # --- USER-DEFINED PATHS ---
-    images_dir = "Project/test-set/images"  # original images
-    annots_dir = "Project/test-set/Annotations" # original annotations
+    images_dir = "traffic_cams/test_raw/images"  # original images
+    annots_dir = "traffic_cams/test_raw/Annotations" # original annotations
     
     # Output folders (will be created if they don't exist)
-    out_images_dir = "Project/test_resized/images"
-    out_annots_dir = "Project/test_resized/Annotations"
+    out_images_dir = "traffic_cams/test_resized/images"
+    out_annots_dir = "traffic_cams/test_resized/Annotations"
     
     os.makedirs(out_images_dir, exist_ok=True)
     os.makedirs(out_annots_dir, exist_ok=True)

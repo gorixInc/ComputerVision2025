@@ -3,4 +3,5 @@
 *.xml
 *.csv
 *.zip
+traffic_cams/checkpoints
 *.pth

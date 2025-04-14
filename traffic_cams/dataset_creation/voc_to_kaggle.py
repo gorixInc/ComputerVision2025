@@ -2,17 +2,18 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 import os
 import glob
+import random
 ## AI GENERATED CODE
 
 # --- Configuration ---
 
 # Directory containing the image files (e.g., .jpg, .png)
-IMAGE_DIR = 'Project/test_resized/images'
+IMAGE_DIR = 'traffic_cams/datasets/dataset_split/val/images'
 # Directory containing the PASCAL VOC XML annotation files
 # (Can be the same as IMAGE_DIR if they are stored together)
-VOC_XML_DIR = 'Project/test_resized/Annotations'
+VOC_XML_DIR = 'traffic_cams/datasets/dataset_split/val/Annotations'
 # Path to save the output ground truth CSV file
-OUTPUT_CSV_FILE = 'Project/to_kaggle/test_ground_truth.csv'
+OUTPUT_CSV_FILE = 'traffic_cams/val_gt.csv'
 # List of image file extensions to look for
 IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.tif', '.tiff']
 
@@ -145,6 +146,14 @@ if all_ground_truths:
         if col not in df_gt.columns:
             df_gt[col] = None # Or appropriate default like pd.NA
     df_gt = df_gt[column_order]
+
+    df_gt['Usage'] = 'Private'
+    img_ids = df_gt['image_id'].unique()
+    public_pct = 0.25
+    n_public = int(len(img_ids) * public_pct)
+    public_imgs = random.sample(list(img_ids), n_public)
+    print(df_gt[df_gt['image_id'].isin(public_imgs)] )
+    df_gt.loc[df_gt['image_id'].isin(public_imgs), 'Usage'] = 'Public'
 
     df_gt.to_csv(OUTPUT_CSV_FILE, index=False)
     print("-" * 30)

@@ -127,7 +127,7 @@ def average_iou(boxes, anchors):
 
 def main():
     # 1. Define your PASCAL VOC Annotations directory
-    annotations_dir = "Project/dataset_resized_split/train/Annotations"  # Change this path
+    annotations_dir = "traffic_cams/dataset_split/train/Annotations"  # Change this path
 
     # 2. Load bounding boxes
     all_boxes = load_dataset_annotations(annotations_dir)
