@@ -2,6 +2,8 @@ import numpy as np
 import torch # Assuming torch is used in targets_to_results
 from itertools import product # Assuming product is used
 
+# AI generated code 
+
 # --- Assume your targets_to_results function exists ---
 # (Including a dummy version here for testing, replace with your actual one)
 def target_offsets_to_bbox(tx, ty, tw, th, aw, ah, stride, i, j):

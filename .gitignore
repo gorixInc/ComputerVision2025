@@ -5,3 +5,6 @@
 *.zip
 traffic_cams/checkpoints
 *.pth
+*chkpts*
+*detrresnet50*
+*.png
